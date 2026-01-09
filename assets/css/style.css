@@ -910,90 +910,36 @@ section {
   color: #fff;
 }
 
-.contact .php-email-form {
+
+/* Contact form container */
+.contact .contact-form {
   width: 100%;
   padding: 30px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form .form-group {
-  margin-bottom: 15px;
-}
-
-.contact .php-email-form label {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
+/* Form controls – Bootstrap-like */
+.contact .contact-form .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input {
-  height: 44px;
+/* Focus state */
+.contact .contact-form .form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-.contact .php-email-form textarea {
+/* Textarea spacing */
+.contact .contact-form textarea {
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+/* Submit button */
+.contact .contact-form button[type="submit"] {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -1002,7 +948,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .contact-form button[type="submit"]:hover {
   background: #37b3ed;
 }
 
@@ -1014,6 +960,17 @@ section {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 /*--------------------------------------------------------------
@@ -1094,5 +1051,87 @@ section {
     position: static;
     width: auto;
     padding-right: 20px 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Page Footer (Bottom)
+--------------------------------------------------------------*/
+#page-footer {
+  background: #040b14;
+  color: #fff;
+  padding: 20px 0;          /* kompaktabb footer */
+  margin-left: 300px;      /* sidebar offset */
+}
+
+#page-footer .row {
+  display: flex;
+  align-items: flex-start;
+  --bs-gutter-y: 0;
+}
+
+#page-footer .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* ---------- TITLES ---------- */
+.htb-title,
+.thm-title {
+  margin-bottom: 6px;     
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Hack The Box */
+.htb-title {
+  color: #ADE126;
+}
+
+/* TryHackMe */
+.thm-title {
+  color: #ADE126;
+  letter-spacing: 0.3px;
+  margin-bottom: 10px;
+}
+
+/* ---------- CONTENT ---------- */
+
+/* HTB icon */
+.htb-logo {
+  width: 120px;            
+  height: auto;
+  max-width: 100%;
+}
+
+/* THM badge */
+.thm-badge {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  min-height: 150px;
+  border: none;
+  display: block;
+  margin-top: 12px;
+  margin: 0 auto;
+}
+
+/* ---------- FOOTER META ---------- */
+#page-footer small {
+  color: #aaa;
+  display: block;
+  margin-top: 10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1199px) {
+  #page-footer {
+    margin-left: 0;
+  }
+
+  #page-footer .col-md-6 {
+    margin-bottom: 12px;
   }
 }
